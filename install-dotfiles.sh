@@ -24,15 +24,16 @@ fi
 
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
-    echo "removing old configs"
-    rm -rf ~/.config/nvim ~/.config/starship.toml ~/.local/share/nvim/ ~/.cache/nvim/ ~/.config/ghostty/config
+    echo "removing old configs: nvim ghostty"
+    rm -rf ~/.config/nvim ~/.local/share/nvim/ ~/.cache/nvim/ ~/.config/ghostty/config
 
     cd "$REPO_NAME" || exit
-    stow zshrc
     stow ghostty
-    stow tmux
+    stow git
     stow nvim
-    stow starship
+    stow ripgrep
+    stow yazi
+    stow zsh
 else
     echo "Failed to clone the repository."
     exit 1
