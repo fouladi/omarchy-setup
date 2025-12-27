@@ -15,6 +15,20 @@ following command:
 It installs all additional packages and install or overrides their
 current configuration.
 
+### > [!NOTE]
+
+*Omarchy* uses encrypted hard drives by default. If you have not
+encrypted your hard drive so that you always have to log in, install SDM
+as alternative stitching to SDDM - for multi-user system too:
+
+```sh
+yay -S sddm
+sudo systemctl enable sddm
+sudo systemctl disable omarchy-seamless-login
+# optional but recommended:
+sudo reboot
+```
+
 ## Credit
 
 It is based on idea and scripts of:
