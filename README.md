@@ -15,7 +15,7 @@ following command:
 It installs all additional packages and install or overrides their
 current configuration.
 
-### > [!NOTE]
+### [NOTE]
 
 *Omarchy* uses encrypted hard drives by default. If you have not
 encrypted your hard drive so that you always have to log in, install SDM
